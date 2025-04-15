@@ -22,7 +22,7 @@
  }
  
  .navigation_social {
-    margin-left: 66rem;
+    margin-left: 110rem;
     margin-top: 10px;
     display: flex;
     column-gap: 20px;
@@ -84,27 +84,25 @@
  }
  
  .dashboard {
-    width: 60%;
+    width: 14%;
     height: 50px;
     border: none;
-    background: rgba(246, 163, 62, 0.743);
+    background: rgba(76, 113, 235, 0.918);
     border-radius: 5px;
     color: whitesmoke;
-    margin-left: 48px;
+    margin-left: 110px;
  }
  
  .dashboard:hover,
  .dashboard:focus,
  .dashboard:active {
-    background-color: rgb(102, 72, 38) !important;
+    background-color: rgba(29, 76, 233, 0.637) !important;
  }
  
  .container {
-    max-width: 600px;
     display: flex;
     gap: 55px;
-    margin: auto;
-    margin-top: 50px;
+    margin-left: 100px;
     flex-wrap: wrap;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: rgb(49, 49, 49);
@@ -152,8 +150,6 @@
  }
  
  #organizacao {
-    width: 100%;
-    margin-left: 350px;
-    margin-top: 100px;
-    margin-left: 350px;
+    width: 50%;
  }
+ 

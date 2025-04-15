@@ -10,7 +10,7 @@ include_once("conexao.php");
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/telaLogin.css">
-  <title>TASK List</title>
+  <title>Login</title>
 </head>
 
 <body>
@@ -18,7 +18,7 @@ include_once("conexao.php");
   <div class="custom-container">
     <div id="cabecalho">
       <div id="conteudo-cabecalho">
-        <h1>Tasks List</h1>
+        <h1>Gospel Chord</h1>
         <img src="./img/logo.png" alt="Logo">
       </div>
     </div>
