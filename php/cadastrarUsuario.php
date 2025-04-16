@@ -1,10 +1,13 @@
 <?php
-    include_once('php/conexao.php');
+    include_once('conexao.php');
 
     $nome = filter_input(INPUT_POST, 'nome');
     $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
     $senha = filter_input(INPUT_POST, 'senha');
-    
+    $celular = filter_input(INPUT_POST, 'celular');
+    $cidade = filter_input(INPUT_POST, 'cidade');
+    $estado = filter_input(INPUT_POST, 'estado');
+
     
     if (empty($nome) || empty($email) || empty($senha)){
       echo "Todos os campos são obrigatórios";
@@ -41,8 +44,8 @@
     $senha_hash = password_hash($senha, PASSWORD_DEFAULT);
 
     // Preparação e execução da inserção no banco de dados
-    $stmt = $conn->prepare("INSERT INTO usuarios (nome, email, senha) VALUES (?, ?, ?)");
-    $stmt->bind_param("sss", $nome, $email, $senha_hash);
+    $stmt = $conn->prepare("INSERT INTO usuarios (nome, email, senha, celular, status, cidade, estado, tipo_cadastro, datahora_cadastro) VALUES (?, ?, ?, ?, 'ativo', ?, ?, 'free', NOW())");
+    $stmt->bind_param("ssssss", $nome, $email, $senha_hash, $celular, $cidade, $estado);
 
     if ($stmt->execute()) {
         echo "Cadastro realizado com sucesso!";

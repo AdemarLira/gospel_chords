@@ -43,6 +43,10 @@ include_once("php/conexao.php");
                   <input type="password" id="senha" placeholder="Digite sua senha">
                 </div>
                 <div class="form-group">
+                  <label for="celular">Celular</label>
+                  <input type="tel" id="celular" placeholder="Digite seu celular">
+                </div>
+                <div class="form-group">
                   <label for="cidade">Cidade</label>
                   <input type="text" id="cidade" placeholder="Digite sua cidade">
                 </div>
@@ -51,10 +55,6 @@ include_once("php/conexao.php");
                 <div class="form-group">
                   <label for="estado">Estado</label>
                   <input type="text" id="estado" placeholder="Digite seu estado">
-                </div>
-                <div class="form-group">
-                  <label for="celular">Celular</label>
-                  <input type="tel" id="celular" placeholder="Digite seu celular">
                 </div>
               </div>
               <div class="form-actions">
