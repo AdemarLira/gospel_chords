@@ -36,3 +36,6 @@ function validarFormulario(){
     function criarCadastro() {
       window.location.href = 'cadastrar_usuario.php';
     }
+    function voltarIndex(){
+      window.location.href = 'index.html';
+    }

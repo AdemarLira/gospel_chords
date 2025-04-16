@@ -1,7 +1,6 @@
 <?php
 include_once("conexao.php");
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
