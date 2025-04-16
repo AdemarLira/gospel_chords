@@ -49,9 +49,14 @@
    z-index: 2;
 }
 
+.header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 20px; /* opcional */
+}
+
 .navigation_social {
-    margin-left: 100rem;
-    margin-top: 10px;
     display: flex;
     column-gap: 20px;
 }
@@ -109,7 +114,7 @@
     border: 1px solid var(--green);
  
 }
-.dashboard {
+.verificar-planos {
     width: 30%;
     height: 35px;
     border: none;
@@ -120,10 +125,10 @@
     margin-top: 40px;
 }
  
-.dashboard:hover,
-.dashboard:focus,
-.dashboard:active {
-    background-color: rgba(29, 76, 233, 0.637) !important;
+.verificar-planos:hover,
+.verificar-planos:focus,
+.verificar-planos:active {
+    background-color: rgba(14, 107, 212, 0.637) !important;
 }
  
 .container {
