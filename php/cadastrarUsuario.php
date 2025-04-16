@@ -41,7 +41,7 @@
     $senha_hash = password_hash($senha, PASSWORD_DEFAULT);
 
     // Preparação e execução da inserção no banco de dados
-    $stmt = $conn->prepare("INSERT INTO users (nome, email, senha) VALUES (?, ?, ?)");
+    $stmt = $conn->prepare("INSERT INTO usuarios (nome, email, senha) VALUES (?, ?, ?)");
     $stmt->bind_param("sss", $nome, $email, $senha_hash);
 
     if ($stmt->execute()) {

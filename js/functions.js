@@ -29,10 +29,17 @@ function validarFormulario(){
       alert('Cadastro criado com sucesso');
     }
   
-
     function verificarPlanos() {
       window.location.href = 'planos.php';
     }
+
+    function fazerLogin() {
+      window.location.href = 'login.php';
+    }
+    function atualizarSenha(){
+      window.location.href = 'esqueci_senha.php';
+    }
+
     function criarCadastro() {
       window.location.href = 'cadastrar_usuario.php';
     }

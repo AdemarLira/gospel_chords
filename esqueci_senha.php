@@ -11,7 +11,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"
     rel="stylesheet">
-  <link href="css/index.css" rel="stylesheet">
+  <link href="css/esqueciSenha.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 
@@ -47,39 +47,15 @@
         </a>
     </div>
   </div>
-  <!-- LAYOUT FLEX -->
-  <div class="pagina">
-    <!-- COLUNA DAS INFORMAÇÕES -->
-    <div class="coluna-infos">
-      <div class="main_info">
-        <p data-aos="fade-up" data-aos-duration="1000" style="font-size: 25pt;" id="bemvindo"><strong>Bem-vindo ao Gospel Chord!</strong></p>
-        <p data-aos="fade-up" data-aos-duration="1000">Que você possa ser abençoado e abençoar vidas.</p>
-        <p data-aos="fade-in" data-aos-duration="2000" data-aos-delay="1500" id="organizacao">Funcionalidades disponíveis:</p><br>
-          <div class="container">
-            <div class="box">Cifras</div>
-            <div class="box">Tablaturas</div>
-          </div>
-        <button class="verificar-planos" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="1500" onclick="verificarPlanos()">Conheça nossos planos</button>
-      </div>
-    </div>
-
-    <!-- COLUNA DO FORMULÁRIO -->
+ <!-- COLUNA DO FORMULÁRIO -->
     <div class="coluna-formulario">
       <form class="form-login">
-        <h3 class="mb-4">Login</h3>
+        <h3 class="mb-4">Atualizar senha</h3>
         <div class="mb-3">
           <label for="email" class="form-label">E-mail</label>
           <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail">
         </div>
-        <div class="mb-3">
-          <label for="senha" class="form-label">Senha</label>
-          <input type="password" class="form-control" id="senha" placeholder="Digite sua senha">
-        </div>
-        <button type="submit" class="btn btn-primary w-100" onclick="fazerLogin()">Entrar</button>
-        <div class="links">
-          <a href="#" id="atualizar_senha" onclick="atualizarSenha()">Esqueceu a senha?</a><br>
-          <a href="#" id="criar_cadastro" onclick="criarCadastro()">Ainda não possui cadastro?</a>
-        </div>
+        <button type="submit" class="btn btn-primary w-100" onclick="alterarSenha()">Enviar</button>
       </form>
     </div>
   </div>
