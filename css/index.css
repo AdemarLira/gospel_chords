@@ -1,3 +1,33 @@
+.pagina {
+   display: flex;
+   min-height: 90vh;
+   align-items: center;
+   padding: 50px;
+   gap: 50px;
+ }
+ 
+ .coluna-infos {
+   flex: 0 0 30%; /* Fixa em 30% da largura */
+   color: white;
+ }
+ 
+ .coluna-formulario {
+   flex: 1;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-right: 200px;
+ }
+ 
+ .form-login {
+   background: rgba(255, 255, 255, 0.1);
+   padding: 30px;
+   border-radius: 10px;
+   color: white;
+   width: 100%;
+   max-width: 400px;
+ }
+
 #background {
     position: fixed;
     inset: 0;
@@ -20,9 +50,13 @@
     inset: 0;
     background: linear-gradient(109deg, rgba(10, 12, 16, 0.6) 15%, rgba(10, 12, 16, 0.4) 20%, rgba(10, 12, 15, 0.99) 85%);
  }
- 
+ .container {
+   position: relative;
+   z-index: 2;
+ }
+
  .navigation_social {
-    margin-left: 110rem;
+    margin-left: 100rem;
     margin-top: 10px;
     display: flex;
     column-gap: 20px;
@@ -43,8 +77,8 @@
  }
  
  .main_info {
-    width: 100%;
-    max-width: 570px;
+    width: 200%;
+    max-width: 700px;
  }
  
  .main_info p {
@@ -57,7 +91,6 @@
  .main_info div {
     display: flex;
     column-gap: 32px;
- 
  }
  
  .main_info div a,
@@ -84,13 +117,14 @@
  }
  
  .dashboard {
-    width: 14%;
-    height: 50px;
+    width: 30%;
+    height: 35px;
     border: none;
-    background: rgba(76, 113, 235, 0.918);
+    background:#0d6efd;
     border-radius: 5px;
     color: whitesmoke;
     margin-left: 110px;
+    margin-top: 40px;
  }
  
  .dashboard:hover,
@@ -101,7 +135,8 @@
  
  .container {
     display: flex;
-    gap: 55px;
+    gap: 10px;
+    max-width: 40%;
     margin-left: 100px;
     flex-wrap: wrap;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -123,7 +158,7 @@
  
  
  .box:hover {
-    transform: scale(2.0);
+    transform: scale(1.5);
  }
  
  .box:nth-child(1) {
