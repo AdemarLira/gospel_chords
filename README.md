@@ -1,2 +1,2 @@
 # GospelChords
-Plataforma de cifras para o publico cristao
+Plataforma de cifras para o público cristão
