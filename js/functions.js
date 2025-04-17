@@ -11,7 +11,7 @@ function validarFormulario(){
       alert("Todos os campos são obrigatórios!");
     return false;
     }
-  
+
     if (email.indexOf('@') === -1 || email.indexOf('.') === -1 || email.startsWith('@') || email.endsWith('.') || email.indexOf('@') > email.lastIndexOf('.')) {
       alert("Por favor, insira um email válido!");
       return false; 
@@ -24,6 +24,7 @@ function validarFormulario(){
       return true; 
     }
   
+
     function verificarPlanos() {
       window.location.href = 'planos.php';
     }
@@ -44,8 +45,4 @@ function validarFormulario(){
 
     function salvarCadastro() {
       window.location.href = 'php/cadastrarUsuario.php';
-      // if(input === ''){
-      //   alert('preencha todos os campos!')
-      // }
-      // alert('Cadastro criado com sucesso');
     }
