@@ -42,7 +42,7 @@ include_once("php/conexao.php");
             </div>
             <div class="form-group">
               <label for="celular">Celular</label>
-              <input type="tel" id="celular" name="celular" maxlength="15" placeholder="(11) 98765-4321" required>
+              <input type="tel" id="celular" name="celular" maxlength="15" placeholder="(11) 91234-5678" required>
             </div>
             <div class="form-group">
               <label for="cidade">Cidade</label>
@@ -80,7 +80,6 @@ include_once("php/conexao.php");
           if (valor.length >= 8) {
             formatado += '-' + valor.substring(7, 11);
           }
-
           e.target.value = formatado;
         });
 

@@ -64,22 +64,18 @@
     </div>
     <!-- COLUNA DO FORMULÁRIO -->
     <div class="coluna-formulario">
-      <form class="form-login">
+      <form class="form-login" action="login.php" method="POST">
         <h3 class="mb-4">Login</h3>
         <div class="mb-3">
           <label for="email" class="form-label">E-mail</label>
-          <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail">
+          <input type="email" class="form-control" name="email" placeholder="Digite seu e-mail" required>
         </div>
         <div class="mb-3">
           <label for="senha" class="form-label">Senha</label>
-          <input type="password" class="form-control" id="senha" placeholder="Digite sua senha">
+          <input type="password" class="form-control" name="senha" placeholder="Digite sua senha" required>
         </div>
-        <button type="submit" class="btn btn-primary w-100" onclick="fazerLogin()">Entrar</button>
-        <div class="links">
-          <a href="#" id="atualizar_senha" onclick="atualizarSenha()">Esqueceu a senha?</a><br>
-          <a href="#" id="criar_cadastro" onclick="criarCadastro()">Ainda não possui cadastro?</a>
-        </div>
-      </form>
+        <button type="submit" class="btn btn-primary w-100">Entrar</button>
+      </form>      
     </div>
   </div>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

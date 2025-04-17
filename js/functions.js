@@ -32,6 +32,7 @@ function validarFormulario(){
     function fazerLogin() {
       window.location.href = 'dashboard.php';
     }
+    
     function atualizarSenha(){
       window.location.href = 'esqueci_senha.php';
     }
@@ -45,4 +46,4 @@ function validarFormulario(){
 
     function salvarCadastro() {
       window.location.href = 'php/cadastrarUsuario.php';
-    }
+    } 
