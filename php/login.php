@@ -1,5 +1,4 @@
 <?php
-session_start();
 include_once('conexao.php');
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
@@ -22,3 +21,5 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 }
 ?>
+
+<script src="../js/functions.js"></script>  

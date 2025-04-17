@@ -64,7 +64,7 @@
     </div>
     <!-- COLUNA DO FORMULÁRIO -->
     <div class="coluna-formulario">
-      <form class="form-login" action="login.php" method="POST">
+      <form class="form-login" action="php/login.php" method="POST" onsubmit="return validarLogin();">
         <h3 class="mb-4">Login</h3>
         <div class="mb-3">
           <label for="email" class="form-label">E-mail</label>
@@ -74,7 +74,13 @@
           <label for="senha" class="form-label">Senha</label>
           <input type="password" class="form-control" name="senha" placeholder="Digite sua senha" required>
         </div>
-        <button type="submit" class="btn btn-primary w-100">Entrar</button>
+        <button type="button" class="btn btn-primary w-100" onclick="fazerLogin()">Entrar</button>
+        <div class="text-center mt-3">
+          <a href="esqueci_senha.php">Esqueceu a senha?</a>
+        </div>
+        <div class="text-center mt-2">
+          <a href="cadastrar_usuario.php">Não tem uma conta? Cadastre-se</a>
+        </div>
       </form>      
     </div>
   </div>

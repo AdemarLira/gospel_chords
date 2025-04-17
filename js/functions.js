@@ -1,4 +1,3 @@
-// Validações do formulário
 function validarFormulario(){
     var nome = document.getElementById('nome').value.trim();
     var email = document.getElementById('email').value.trim();
@@ -24,13 +23,20 @@ function validarFormulario(){
       return true; 
     }
   
+    function validarLogin(){
+      if($email === ""){
+        alert("Todos os campos são obrigatórios!");
+        return false;
+      }
+      return true; 
+    }
 
     function verificarPlanos() {
       window.location.href = 'planos.php';
     }
 
     function fazerLogin() {
-      window.location.href = 'dashboard.php';
+      window.location.href = 'php/login.php';
     }
     
     function atualizarSenha(){
