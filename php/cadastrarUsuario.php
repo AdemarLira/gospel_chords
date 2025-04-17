@@ -24,4 +24,4 @@
   }
 ?>
   
-  <script src="js/functions.js"></script>  
+<script src="js/functions.js"></script>  
