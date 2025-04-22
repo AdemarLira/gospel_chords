@@ -22,34 +22,11 @@ function validarFormulario(){
     }
       return true; 
     }
-  
-    function validarLogin(){
-      if($email === ""){
-        alert("Todos os campos são obrigatórios!");
-        return false;
-      }
-      return true; 
-    }
 
-    function verificarPlanos() {
-      window.location.href = 'planos.php';
-    }
+function verificarPlanos() {
+  window.location.href = 'planos.php';
+}
 
-    function fazerLogin() {
-      window.location.href = 'php/login.php';
-    }
-    
-    function atualizarSenha(){
-      window.location.href = 'esqueci_senha.php';
-    }
-
-    function criarCadastro() {
-      window.location.href = 'cadastrar_usuario.php';
-    }
-    function voltarIndex(){
-      window.location.href = 'index.html';
-    }
-
-    function salvarCadastro() {
-      window.location.href = 'php/cadastrarUsuario.php';
-    } 
+function voltarIndex(){
+  window.location.href = 'index.html';
+}
