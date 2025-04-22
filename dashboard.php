@@ -7,15 +7,8 @@ include_once("php/conexao.php");
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-  integrity="sha512-p3V5+YdK+zZWR1HjY9N4+r6hj+hcyVhr9F7IjIadPRl+1kD2P2G+vZpZyTymgSg24dUU90ZG2IR+1z6uXK+X0A=="
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"
-/>
-  <link rel="stylesheet" href="css/dashboard.css">
+  <script src="https://kit.fontawesome.com/328073035f.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/dashboard1.css">
   <title>Página inicial</title>
 </head>
 <body>
@@ -28,8 +21,8 @@ include_once("php/conexao.php");
           <input name="pesquisar" id="js-header-pesquisa" type="text" placeholder="Qual música você deseja?">
           
           <!-- Botão de busca com ícone -->
-          <button type="submit" class="header-botao-pesquisa"><i class="fa-solid fa-magnifying-glass"></i></button>
-          <button class="header-botao-premium">Premium</button>
+          <button type="submit" class="header-botao-pesquisa"><i class="fa-solid fa-magnifying-glass fa-sm"></i></button>
+          <button class="header-botao-premium">Premium <i class="fa-regular fa-star"></i></button>
         </form>
       </div>
     </div>

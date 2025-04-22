@@ -10,3 +10,11 @@ CREATE TABLE usuarios (
        tipo_cadastro VARCHAR(255) NOT NULL,
        datahora_cadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+CREATE TABLE `gospelchord`.`musicas` (
+       `id` INT NOT NULL AUTO_INCREMENT , 
+       `nome_musica` VARCHAR(255) NOT NULL , 
+       `autor` VARCHAR(255) NOT NULL , 
+       `versao` VARCHAR(255) NOT NULL ,
+       `tipo` VARCHAR(255) NOT NULL , 
+       PRIMARY KEY (`id `)) ENGINE = InnoDB;
