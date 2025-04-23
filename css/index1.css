@@ -118,7 +118,7 @@
     width: 30%;
     height: 35px;
     border: none;
-    background: rgb(13, 110, 253);
+    background: #4A89E4;
     border-radius: 5px;
     color: whitesmoke;
     margin-left: 110px;
@@ -128,9 +128,18 @@
 .verificar-planos:hover,
 .verificar-planos:focus,
 .verificar-planos:active {
-    background-color: rgba(14, 107, 212, 0.637) !important;
+    background-color: #F4B400 !important;
 }
- 
+
+#botaoEntrar {
+    background: #4A89E4;
+}
+#botaoEntrar:hover,
+#botaoEntrar:focus,
+#botaoEntrar:active {
+    background-color: #F4B400 !important;
+}
+
 .container {
     display: flex;
     gap: 10px;

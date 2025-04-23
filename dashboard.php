@@ -14,39 +14,46 @@ include_once("php/conexao.php");
   <title>Página inicial</title>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg custom-navbar" id="painel-navegacao">
   <div class="container-fluid">
-  <nav class="navbar bg-body-tertiary">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">
-        <img src="img/logo.png" id="logo-gospelChord" alt="logo" height="40">
-      </a>
-    </div>
-  </nav>
-    <img src=>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="nav nav-underline">
+    <nav class="navbar bg-body-tertiary">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="img/logo.png" id="logo-gospelChord" alt="logo" height="40">
+        </a>
+      </div>
+    </nav>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- Formulário de busca à esquerda -->
+        <form class="d-flex me-auto" role="search">
+          <input class="form-control me-2" type="search" placeholder="Pesquisar música" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">
+            <i class="fa-solid fa-magnifying-glass fa-sm"></i>
+          </button>
+        </form>
+        <!-- Itens à direita -->
+        <ul class="navbar-nav ms-auto align-items-center gap-2">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Active</a>
+            <button class="btn" id="header-botao-premium">Premium <i class="bi bi-bookmark-star-fill"></i></button>
+          </li>
+          <li class="nav-item dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown button</button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="listas.php">Minhas listas</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Link</a>
           </li>
         </ul>
-      <button class="header-botao-premium">Premium <i class="bi bi-bookmark-star-fill"></i></button>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Qual música você deseja?" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass fa-sm"></i></button>
-      </form>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 <div id="background">
   <video loop autoplay muted>
     <source src="mp4/violao.mp4" type="video/mp4">

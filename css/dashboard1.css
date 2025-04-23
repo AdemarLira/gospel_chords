@@ -26,23 +26,30 @@ body {
 } 
 
 /* HEADER */
-.navbar navbar-expand-lg bg-body-tertiary{
-  background-color: rgb(114, 104, 104) !important;
+.custom-navbar {
+  background-color: rgba(255, 255, 255, 0.7); /* Fundo branco translúcido */
+  backdrop-filter: blur(10px);               /* Desfoque elegante */
+  -webkit-backdrop-filter: blur(10px);       /* Suporte Safari */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);      /* Sombra leve */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05); /* Linha sutil */
+}
+#header-botao-premium {
+  background-color: rgba(13, 110, 253, 0.637);
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
 }
 
-  .header-botao-premium{
-    background-color:rgb(13, 110, 253);
-    border-radius: 6px;
-    width: 10%;
-    height: 34px;
-    border: none;
-    margin-left: 5px;
-  }
+#header-botao-premium:hover {
+  background-color: #d99d00;
+}
 
-  .header-botao-premium:hover,
-  .header-botao-premium:focus,
-  .header-botao-premium:active {
-    background-color: rgba(13, 110, 253, 0.637) !important;
+  #header-botao-premium:hover,
+  #header-botao-premium:focus,
+  #header-botao-premium:active {
+    background-color:#F4B400 !important;
 }
 
 @media (max-width: 600px) {
@@ -57,7 +64,7 @@ body {
   }
 
   .header-botao-pesquisa,
-  .header-botao-premium {
+  #header-botao-premium {
     width: 100%;
   }
 }
