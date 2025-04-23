@@ -66,14 +66,14 @@ body {
 }
 
 #header-botao-premium:hover {
-  background-color: #d99d00;
+  background-color:  rgba(231, 177, 29, 0.856) !important;
   box-shadow: 0 4px 8px #946a00;
 }
 
   #header-botao-premium:hover,
   #header-botao-premium:focus,
   #header-botao-premium:active {
-    background-color:#F4B400 !important;
+    background-color: rgba(231, 177, 29, 0.856) !important;
 }
 
 .btn-secondary {
