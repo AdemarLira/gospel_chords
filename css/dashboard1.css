@@ -33,23 +33,52 @@ body {
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);      /* Sombra leve */
   border-bottom: 1px solid rgba(0, 0, 0, 0.05); /* Linha sutil */
 }
+
+.navbar.transparent-navbar {
+  background-color: transparent !important;
+}
+
+.form-control {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+
+.btn-outline-success {
+  box-shadow: 0 4px 8px rgba(0, 128, 0, 0.3); 
+  transition: box-shadow 0.3s ease; 
+}
+
+.btn-outline-success:hover {
+  box-shadow: 0 6px 12px rgba(0, 128, 0, 0.5); 
+}
+
 #header-botao-premium {
-  background-color: rgba(13, 110, 253, 0.637);
+  background-color: #0d6efda2;
   color: white;
   border: none;
   padding: 6px 12px;
   border-radius: 6px;
   transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px #094fb8a2; 
 }
 
 #header-botao-premium:hover {
   background-color: #d99d00;
+  box-shadow: 0 4px 8px #946a00;
 }
 
   #header-botao-premium:hover,
   #header-botao-premium:focus,
   #header-botao-premium:active {
     background-color:#F4B400 !important;
+}
+
+.btn-secondary {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 @media (max-width: 600px) {
@@ -67,4 +96,27 @@ body {
   #header-botao-premium {
     width: 100%;
   }
+}
+
+.nav-link {
+  position: relative;
+  display: inline-block;
+  color: #0d6efd !important;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background-color: #0d6efd; 
+  transition: width 0.3s ease;
+  transition: width 0.5s ease-in-out;
+}
+
+.nav-link:hover::after {
+  width: 100%;
 }

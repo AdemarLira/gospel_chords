@@ -16,7 +16,7 @@ include_once("php/conexao.php");
 <body>
 <nav class="navbar navbar-expand-lg custom-navbar" id="painel-navegacao">
   <div class="container-fluid">
-    <nav class="navbar bg-body-tertiary">
+    <nav class="navbar transparent-navbar">
       <div class="container">
         <a class="navbar-brand" href="index.html">
           <img src="img/logo.png" id="logo-gospelChord" alt="logo" height="40">
@@ -36,6 +36,9 @@ include_once("php/conexao.php");
           <li class="nav-item">
             <button class="btn" id="header-botao-premium">Premium <i class="bi bi-bookmark-star-fill"></i></button>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="listas.php">Minhas listas</a>
+          </li>
           <li class="nav-item dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown button</button>
               <ul class="dropdown-menu">
@@ -43,12 +46,6 @@ include_once("php/conexao.php");
                 <li><a class="dropdown-item" href="#">Another action</a></li>
                 <li><a class="dropdown-item" href="#">Something else here</a></li>
               </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="listas.php">Minhas listas</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
           </li>
         </ul>
       </div>
