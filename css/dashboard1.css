@@ -26,40 +26,38 @@ body {
 } 
 
 /* HEADER */
-
-#logo-gospelChord{
-  width: 60px;
-  margin-left: 6%;
+.navbar navbar-expand-lg bg-body-tertiary{
+  background-color: rgb(114, 104, 104) !important;
 }
-.header-botao-pesquisa {
-    background: #fafafa !important;
-    border-radius: 6px;
-    border: none;
-    padding: 6px 8px !important;
-    cursor: pointer !important;
-    /* position: relative !important;
-    z-index: 10 !important; */
-  }
-  
-  .header-botao-pesquisa i {
-    color: #333 !important;
-    font-size: 10px !important;
-  }
 
-  #js-header-pesquisa{
-   border-radius: 6px;
-   height: 25px;
-   border: none;
-  }
   .header-botao-premium{
     background-color:rgb(13, 110, 253);
     border-radius: 6px;
     width: 10%;
-    height: 25px;
+    height: 34px;
     border: none;
+    margin-left: 5px;
   }
+
   .header-botao-premium:hover,
   .header-botao-premium:focus,
   .header-botao-premium:active {
     background-color: rgba(13, 110, 253, 0.637) !important;
+}
+
+@media (max-width: 600px) {
+  .header-pesquisa1 {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #js-header-pesquisa {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .header-botao-pesquisa,
+  .header-botao-premium {
+    width: 100%;
+  }
 }
