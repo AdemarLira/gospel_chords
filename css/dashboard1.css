@@ -123,6 +123,28 @@ body {
   width: 100%;
 }
 
+#dropdown1{
+  position: relative;
+  display: inline-block;
+  color:rgb(231, 177, 29) !important;
+  transition: color 0.3s ease;
+}
+#dropdown1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background-color: rgb(231, 177, 29); 
+  transition: width 0.3s ease;
+  transition: width 0.5s ease-in-out;
+}
+
+#dropdown1:hover::after {
+  width: 100%;
+}
+
 /* #pedir-cifra{
 
 } */
