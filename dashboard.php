@@ -1,5 +1,7 @@
 <?php
-include_once("php/conexao.php");
+include_once("api/conexao.php");
+session_start();
+$imagemPerfil = isset($_SESSION['imagemPerfil']) ? $_SESSION['imagemPerfil'] : 'uploads/images.jpg';
 ?>
 
 <!DOCTYPE html>
@@ -32,15 +34,17 @@ include_once("php/conexao.php");
         </button>
       </form>
       <!-- Itens à direita -->
-      <ul class="navbar-nav ms-auto align-items-center gap-2">
+      <ul class="navbar-nav align-items-center">
         <li class="nav-item">
           <button class="btn" id="header-botao-premium" onclick="verificarPlanos()">Premium <i class="bi bi-bookmark-star-fill"></i></button>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="listas.php">Minhas listas</a>
+          <a class="nav-link" href="listas.php" id="listas">Minhas listas</a>
         </li>
-        <li class="nav-item dropdown">
-          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown button</button>
+        <li class="nav-item dropdown" id="dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="<?php echo $imagemPerfil; ?>" alt="Perfil" class="rounded-circle" style="width: 40px; height: 40px; object-fit: cover;">
+            </a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="meu_perfil.php">Meu perfil</a></li>
               <li><a class="dropdown-item" href="assinaturas.php">Minhas assinaturas</a></li>
@@ -60,5 +64,13 @@ include_once("php/conexao.php");
 </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/functions.js"></script>
+  <script>
+    fetch('api/usuario.php')
+      .then(response => response.json())
+      .then(data => {
+        const imagem = data.imagem || 'uploads/images.jpg';
+        document.getElementById('imagem-perfil').src = imagem;
+      });
+  </script>
 </body>
 </html>
