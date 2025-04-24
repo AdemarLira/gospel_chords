@@ -1,5 +1,5 @@
 <?php
-include_once("php/conexao.php");
+include_once("api/conexao.php");
 ?>
 
 <!DOCTYPE html>
@@ -8,7 +8,7 @@ include_once("php/conexao.php");
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/328073035f.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/dashboard1.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <title>Página inicial</title>
@@ -40,7 +40,9 @@ include_once("php/conexao.php");
           <a class="nav-link" href="listas.php">Minhas listas</a>
         </li>
         <li class="nav-item dropdown">
-          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown button</button>
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="<?php echo $imagemPerfil; ?>" alt="Perfil" class="rounded-circle" style="width: 40px; height: 40px; object-fit: cover;">
+            </a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="meu_perfil.php">Meu perfil</a></li>
               <li><a class="dropdown-item" href="assinaturas.php">Minhas assinaturas</a></li>
@@ -60,5 +62,13 @@ include_once("php/conexao.php");
 </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/functions.js"></script>
+  <script>
+    fetch('api/usuario.php')
+      .then(response => response.json())
+      .then(data => {
+        const imagem = data.imagem || 'default.jpg';
+        document.getElementById('imagem-perfil').src = imagem;
+      });
+  </script>
 </body>
 </html>

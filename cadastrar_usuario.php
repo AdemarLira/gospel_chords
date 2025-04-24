@@ -1,5 +1,5 @@
 <?php
-include_once("php/conexao.php");
+include_once("api/conexao.php");
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +27,6 @@ include_once("php/conexao.php");
       <div class="coluna-formulario">
         <div class="coluna-formulario">
         <form class="form-login" action="php/cadastrarUsuario.php" method="POST" enctype="multipart/form-data" onsubmit="return validarFormulario();">
-<!-- Seus campos continuam os mesmos, só precisa adicionar 'name' em cada input -->
             <div class="form-group">
               <label for="nome">Nome</label>
               <input type="text" id="nome" name="nome" placeholder="Digite seu nome">

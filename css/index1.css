@@ -128,7 +128,7 @@
 .verificar-planos:hover,
 .verificar-planos:focus,
 .verificar-planos:active {
-    background-color:  rgba(231, 177, 29, 0.856) !important;
+    background-color:   rgba(231, 177, 29, 0.521) !important;
 }
 
 #botaoEntrar {
@@ -137,7 +137,7 @@
 #botaoEntrar:hover,
 #botaoEntrar:focus,
 #botaoEntrar:active {
-    background-color: rgba(231, 177, 29, 0.856) !important;
+    background-color:  rgba(231, 177, 29, 0.521) !important;
 }
 
 .container {
@@ -197,3 +197,15 @@
 .links{
 text-align: right;
 }
+
+#esqueci-senha:hover,
+#esqueci-senha:focus,
+#esqueci-senha:active {
+  color: rgba(231, 177, 29, 0.521) !important;
+} 
+
+#cadastrar:hover,
+#cadastrar:focus,
+#cadastrar:active {
+  color: rgba(231, 177, 29, 0.521) !important;
+}  

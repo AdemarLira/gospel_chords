@@ -27,11 +27,11 @@ body {
 
 /* HEADER */
 .custom-navbar {
-  background-color: rgba(255, 255, 255, 0.7); /* Fundo branco translúcido */
-  backdrop-filter: blur(10px);               /* Desfoque elegante */
-  -webkit-backdrop-filter: blur(10px);       /* Suporte Safari */
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);      /* Sombra leve */
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05); /* Linha sutil */
+  background-color: rgba(255, 255, 255, 0.7); 
+  backdrop-filter: blur(10px);              
+  -webkit-backdrop-filter: blur(10px);       
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);      
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05); 
 }
 
 .navbar.transparent-navbar {
@@ -47,12 +47,7 @@ body {
 }
 
 .btn-outline-success {
-  box-shadow: 0 4px 8px rgba(0, 128, 0, 0.3); 
   transition: box-shadow 0.3s ease; 
-}
-
-.btn-outline-success:hover {
-  box-shadow: 0 6px 12px rgba(0, 128, 0, 0.5); 
 }
 
 #header-botao-premium {
