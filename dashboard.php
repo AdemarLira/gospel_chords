@@ -10,12 +10,13 @@ $imagemPerfil = isset($_SESSION['imagemPerfil']) ? $_SESSION['imagemPerfil'] : '
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/328073035f.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/dashboard1.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <title>Página inicial</title>
 </head>
 <body>
+  <!-- HEADER -->
 <nav class="navbar navbar-expand-lg custom-navbar" id="painel-navegacao">
   <div class="container-fluid">
     <nav class="navbar transparent-navbar">
@@ -26,14 +27,14 @@ $imagemPerfil = isset($_SESSION['imagemPerfil']) ? $_SESSION['imagemPerfil'] : '
       </div>
     </nav>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-  <!-- Formulário de busca à esquerda -->
+  <!-- BUSCA musicas -->
       <form class="d-flex me-auto" role="search">
         <input class="form-control me-2" type="search" placeholder="Pesquisar música" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">
           <i class="fa-solid fa-magnifying-glass fa-sm"></i>
         </button>
       </form>
-      <!-- Itens à direita -->
+  <!-- Itens à direita -->
       <ul class="navbar-nav align-items-center">
         <li class="nav-item">
           <button class="btn" id="header-botao-premium" onclick="verificarPlanos()">Premium <i class="bi bi-bookmark-star-fill"></i></button>
@@ -42,7 +43,7 @@ $imagemPerfil = isset($_SESSION['imagemPerfil']) ? $_SESSION['imagemPerfil'] : '
           <a class="nav-link" href="listas.php" id="listas">Minhas listas</a>
         </li>
         <li class="nav-item dropdown" id="dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" id="dropdown1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               <img src="<?php echo $imagemPerfil; ?>" alt="Perfil" class="rounded-circle" style="width: 40px; height: 40px; object-fit: cover;">
             </a>
             <ul class="dropdown-menu">
