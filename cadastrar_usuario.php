@@ -26,7 +26,7 @@ include_once("api/conexao.php");
 <!-- COLUNA DO FORMULÁRIO -->
       <div class="coluna-formulario">
         <div class="coluna-formulario">
-        <form class="form-login" action="php/cadastrarUsuario.php" method="POST" enctype="multipart/form-data" onsubmit="return validarFormulario();">
+        <form class="form-login" action="api/cadastrarUsuario.php" method="POST" enctype="multipart/form-data" onsubmit="return validarFormulario();">
             <div class="form-group">
               <label for="nome">Nome</label>
               <input type="text" id="nome" name="nome" placeholder="Digite seu nome">

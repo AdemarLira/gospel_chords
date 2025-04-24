@@ -1,5 +1,7 @@
 <?php
 include_once("api/conexao.php");
+session_start();
+$imagemPerfil = isset($_SESSION['imagemPerfil']) ? $_SESSION['imagemPerfil'] : 'uploads/images.jpg';
 ?>
 
 <!DOCTYPE html>
@@ -8,7 +10,7 @@ include_once("api/conexao.php");
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/328073035f.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/dashboard1.css">
+    <link rel="stylesheet" href="css/dashboard.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <title>Página inicial</title>
@@ -32,14 +34,14 @@ include_once("api/conexao.php");
         </button>
       </form>
       <!-- Itens à direita -->
-      <ul class="navbar-nav ms-auto align-items-center gap-2">
+      <ul class="navbar-nav align-items-center">
         <li class="nav-item">
           <button class="btn" id="header-botao-premium" onclick="verificarPlanos()">Premium <i class="bi bi-bookmark-star-fill"></i></button>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="listas.php">Minhas listas</a>
+          <a class="nav-link" href="listas.php" id="listas">Minhas listas</a>
         </li>
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown" id="dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               <img src="<?php echo $imagemPerfil; ?>" alt="Perfil" class="rounded-circle" style="width: 40px; height: 40px; object-fit: cover;">
             </a>
@@ -66,7 +68,7 @@ include_once("api/conexao.php");
     fetch('api/usuario.php')
       .then(response => response.json())
       .then(data => {
-        const imagem = data.imagem || 'default.jpg';
+        const imagem = data.imagem || 'uploads/images.jpg';
         document.getElementById('imagem-perfil').src = imagem;
       });
   </script>
