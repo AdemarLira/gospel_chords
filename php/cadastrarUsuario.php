@@ -8,20 +8,32 @@
       $celular = trim($_POST["celular"]);
       $cidade = trim($_POST["cidade"]);
       $estado = trim($_POST["estado"]);
-
-    // Criptografar senha (opcional mas recomendado)
-    $senhaCriptografada = password_hash($senha, PASSWORD_DEFAULT);
-
-    $sql = "INSERT INTO usuarios (nome, email, senha, celular, status, cidade, estado, tipo_cadastro, datahora_cadastro) 
-            VALUES ('$nome', '$email', '$senhaCriptografada', '$celular', 'ativo', '$cidade', '$estado', 'free', now())";
-
-    if (mysqli_query($conn, $sql)) {
-        echo "Usuário cadastrado com sucesso!";
-        header("Location: ../index.html");
-    } else {
-        echo "Erro ao cadastrar: " . mysqli_error($conn);
-    }
-  }
+  
+      $senhaCriptografada = password_hash($senha, PASSWORD_DEFAULT);
+  
+      // Upload da imagem
+      $diretorio = "../uploads/";
+      $nomeArquivo = basename($_FILES["foto"]["name"]);
+      $caminhoCompleto = $diretorio . $nomeArquivo;
+  
+      if (move_uploaded_file($_FILES["foto"]["tmp_name"], $caminhoCompleto)) {
+          echo "Foto enviada com sucesso!<br>";
+      } else {
+          echo "Erro ao enviar a foto.<br>";
+          $caminhoCompleto = ""; // ou defina um valor padrão
+      }
+  
+      $sql = "INSERT INTO usuarios (nome, email, senha, celular, status, cidade, estado, tipo_cadastro, datahora_cadastro, foto) 
+              VALUES ('$nome', '$email', '$senhaCriptografada', '$celular', 'ativo', '$cidade', '$estado', 'free', now(), '$caminhoCompleto')";
+  
+      if (mysqli_query($conn, $sql)) {
+          echo "Usuário cadastrado com sucesso!";
+          // header("Location: ../index.html");
+          // exit;
+      } else {
+          echo "Erro ao cadastrar: " . mysqli_error($conn);
+      }
+  }  
 ?>
   
 <script src="js/functions.js"></script>  

@@ -26,7 +26,7 @@ include_once("php/conexao.php");
 <!-- COLUNA DO FORMULÁRIO -->
       <div class="coluna-formulario">
         <div class="coluna-formulario">
-          <form class="form-login" action="php/cadastrarUsuario.php" method="POST" onsubmit="return validarFormulario();">
+        <form class="form-login" action="php/cadastrarUsuario.php" method="POST" enctype="multipart/form-data" onsubmit="return validarFormulario();">
 <!-- Seus campos continuam os mesmos, só precisa adicionar 'name' em cada input -->
             <div class="form-group">
               <label for="nome">Nome</label>
@@ -51,6 +51,10 @@ include_once("php/conexao.php");
             <div class="form-group">
               <label for="estado">Estado</label>
               <input type="text" id="estado" name="estado" placeholder="Digite seu estado">
+            </div>
+            <div class="form-group">
+              <label for="foto">Foto</label>
+              <input type="file" id="foto" name="foto" accept="image/*">
             </div>
 
             <div class="form-actions">

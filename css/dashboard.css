@@ -111,8 +111,8 @@ body {
   left: 0;
   bottom: 0;
   width: 0;
-  height: 1px;
-  background-color: #0d6efd; 
+  height: 3px;
+  background-color: rgb(231, 177, 29);
   transition: width 0.3s ease;
   transition: width 0.5s ease-in-out;
 }
@@ -120,3 +120,17 @@ body {
 .nav-link:hover::after {
   width: 100%;
 }
+
+/* #pedir-cifra{
+
+} */
+
+#sair{
+  text-align: right;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus,
+.dropdown-item:active {
+  background-color: rgba(231, 177, 29, 0.521) !important;
+}  
