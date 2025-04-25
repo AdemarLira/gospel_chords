@@ -1,21 +1,31 @@
 .pagina {
-   display: flex;
-   min-height: 90vh;
-   align-items: center;
-   padding: 50px;
-   gap: 50px;
-}
-.coluna-infos {
-   flex: 0 0 30%; 
-   color: white;
-}
-.coluna-formulario {
-   flex: 1;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   margin-right: 200px;
-}
+    display: flex;
+    flex-wrap: wrap; /* Permite quebra de linha */
+    justify-content: center;
+    align-items: stretch;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .coluna-infos, .coluna-formulario {
+    flex: 1 1 400px; /* Cresce, encolhe, largura mínima */
+    max-width: 600px;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Ajusta layout para telas menores */
+  @media (max-width: 768px) {
+    .pagina {
+      flex-direction: column;
+    }
+  
+    .coluna-infos, .coluna-formulario {
+      max-width: 100%;
+    }
+  }
+  
 .form-login {
    background: rgba(255, 255, 255, 0.1);
    padding: 30px;
