@@ -9,6 +9,7 @@ $imagemPerfil = isset($_SESSION['imagemPerfil']) ? $_SESSION['imagemPerfil'] : '
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./img/logo_amarela.png">
     <script src="https://kit.fontawesome.com/328073035f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/dashboard2.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -22,7 +23,7 @@ $imagemPerfil = isset($_SESSION['imagemPerfil']) ? $_SESSION['imagemPerfil'] : '
     <nav class="navbar transparent-navbar">
       <div class="container">
         <a class="navbar-brand" href="index.html">
-          <img src="img/logo.png" id="logo-gospelChord" alt="logo" height="40">
+          <img src="img/logo_azul.png" id="logo-gospelChord" alt="logo" height="40">
         </a>
       </div>
     </nav>
