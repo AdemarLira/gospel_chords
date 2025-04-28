@@ -10,7 +10,7 @@ $imagemPerfil = isset($_SESSION['imagemPerfil']) ? $_SESSION['imagemPerfil'] : '
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/328073035f.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/dashboard1.css">
+    <link rel="stylesheet" href="css/dashboard2.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <title>Página inicial</title>
@@ -27,13 +27,20 @@ $imagemPerfil = isset($_SESSION['imagemPerfil']) ? $_SESSION['imagemPerfil'] : '
       </div>
     </nav>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-  <!-- BUSCA musicas -->
+      <!-- BUSCA musicas -->
       <form class="d-flex me-auto" role="search">
         <input class="form-control me-2" type="search" placeholder="Pesquisar música" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">
           <i class="fa-solid fa-magnifying-glass fa-sm"></i>
         </button>
       </form>
+      <!-- TEMAS DARK LIGHT -->
+      <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+          <input type="checkbox" id="checkbox" />
+          <div class="slider round"></div>
+        </label>
+      </div>
   <!-- Itens à direita -->
       <ul class="navbar-nav align-items-center">
         <li class="nav-item">
@@ -58,11 +65,13 @@ $imagemPerfil = isset($_SESSION['imagemPerfil']) ? $_SESSION['imagemPerfil'] : '
       </div>
     </div>
   </nav>
-<div id="background">
+  <div>
+</div>
+<!-- <div id="background">
   <video loop autoplay muted>
     <source src="mp4/violao.mp4" type="video/mp4">
   </video>
-</div>
+</div> -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/functions.js"></script>
   <script>
@@ -72,6 +81,22 @@ $imagemPerfil = isset($_SESSION['imagemPerfil']) ? $_SESSION['imagemPerfil'] : '
         const imagem = data.imagem || 'uploads/images.jpg';
         document.getElementById('imagem-perfil').src = imagem;
       });
+
+      document.addEventListener('DOMContentLoaded', (event) => {
+        const checkbox = document.getElementById('checkbox');
+        const body = document.body;
+
+        checkbox.addEventListener('change', () => {
+            if (checkbox.checked){
+                body.classList.remove('light-mode');
+                body.classList.add('dark-mode');
+            } else{
+                body.classList.remove('dark-mode');
+                body.classList.add('light-mode');
+            }
+        });
+
+    body.classList.add('light-mode');})
   </script>
 </body>
 </html>
