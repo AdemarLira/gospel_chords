@@ -1,3 +1,32 @@
+/* Deixa o container da navbar bem alinhado */
+#painel-navegacao .container-fluid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Espaçamento interno do botão de tema */
+.theme-switch-wrapper {
+  margin-left: 15px;
+}
+
+/* Centraliza o formulário de busca */
+#painel-navegacao form[role="search"] {
+  flex: 1;
+  max-width: 500px;
+}
+
+/* Ajustes nos itens da direita */
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.nav-item {
+  margin-left: 15px;
+}
+
 body {
   font-family:Verdana, Geneva, Tahoma, sans-serif;
   transition: background-color 0.5s, color 0.5s;

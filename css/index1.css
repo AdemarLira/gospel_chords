@@ -1,3 +1,10 @@
+/* @font-face {
+    font-family: "tema";
+    src: url("../fontes/Movie\ Font.ttf");
+}
+body{
+    font-family: "tema";
+} */
 .pagina {
     display: flex;
     flex-wrap: wrap; /* Permite quebra de linha */
