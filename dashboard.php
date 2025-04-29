@@ -28,21 +28,21 @@ $imagemPerfil = isset($_SESSION['imagemPerfil']) ? $_SESSION['imagemPerfil'] : '
       </div>
     </nav>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <!-- BUSCA musicas -->
-      <form class="d-flex me-auto" role="search">
-        <input class="form-control me-2" type="search" placeholder="Pesquisar música" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">
-          <i class="fa-solid fa-magnifying-glass fa-sm"></i>
-        </button>
-      </form>
-      <!-- TEMAS DARK LIGHT -->
+<!-- TEMAS DARK LIGHT -->
       <div class="theme-switch-wrapper">
         <label class="theme-switch" for="checkbox">
           <input type="checkbox" id="checkbox" />
           <div class="slider round"></div>
         </label>
       </div>
-  <!-- Itens à direita -->
+<!-- BUSCA musicas -->
+      <form class="d-flex me-auto" role="search">
+        <input class="form-control me-2" type="search" placeholder="Pesquisar música" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">
+          <i class="fa-solid fa-magnifying-glass fa-sm"></i>
+        </button>
+      </form>
+<!-- Itens à direita -->
       <ul class="navbar-nav align-items-center">
         <li class="nav-item">
           <button class="btn" id="header-botao-premium" onclick="verificarPlanos()">Premium <i class="bi bi-bookmark-star-fill"></i></button>

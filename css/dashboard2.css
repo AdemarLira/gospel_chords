@@ -12,18 +12,19 @@ body.dark-mode {
   color: white;
 }
 
+/* BOTAO TEMA escuro/claro */
 .theme-switch-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  /* padding: 0 200px;  */
 }
 
 .theme-switch {
   position: relative;
   display: inline-block;
-  width: 80px;
-  height: 44px;
+  width: 50px;
+  height: 26px;
 }
 
 .slider {
@@ -35,26 +36,28 @@ body.dark-mode {
   bottom: 0;
   background-color: #0d6efda2;
   transition: 0.4s;
-  border-radius: 44px;
-  width: 80px;
-  height: 44px;
+  border-radius: 26px;
+  width: 50px;
+  height: 26px;
 }
 
 .slider:hover {
-  box-shadow: 0 0 20px rgb(214, 252, 0);
+  box-shadow: 0 0 20px rgba(231, 177, 29, 0.856);
 }
 
 .slider:before {
   position: absolute;
   content: "";
-  height: 36px;
-  width: 36px;
-  left: 4px;
-  bottom: 4px;
-  background-image: url('https://images.icon-icons.com/8/PNG/256/sunrise_sun_sunny_shower_showers_sunny_cloudy_fog_day_time_1458.png');
-  transition: 0.4s;
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  bottom: 3px;
   border-radius: 50%;
-  background-size: cover;
+  transition: 0.4s;
+  background-size: 16px 16px; /* Tamanho fixo */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('https://images.icon-icons.com/8/PNG/256/sunrise_sun_sunny_shower_showers_sunny_cloudy_fog_day_time_1458.png');
 }
 
 input:checked + .slider {
@@ -64,14 +67,16 @@ input:checked + .slider:hover {
   box-shadow: 0 0 20px rgb(255, 255, 255);
 }
 input:checked + .slider:before {
-  transform: translateX(36px);
+  transform: translateX(24px);
   background-image: url('https://images.icon-icons.com/32/PNG/256/moon_night_midnight_2768.png');
-  background-size: cover;
 }
 
 #checkbox {
   width: 0.2px;
 }
+
+#painel-navegacao
+/* ------------ */
 
 /* 
 #background {
@@ -97,7 +102,17 @@ input:checked + .slider:before {
   background: linear-gradient(109deg, rgba(10, 12, 16, 0.8) 15%, rgba(10, 12, 16, 0.6) 20%, rgba(10, 12, 15, 0.99) 85%);
 }  */
 
-/* HEADER */
+/* Ajuste no header */
+#painel-navegacao.custom-navbar {
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  min-height: 60px; /* ou ajuste conforme o desejado */
+}
+
+#painel-navegacao .navbar-brand img {
+  height: 32px; /* Reduz o tamanho do logo */
+}
+
 .custom-navbar {
   background-color: rgba(255, 255, 255, 0.7); 
   backdrop-filter: blur(10px);              
