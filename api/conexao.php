@@ -3,6 +3,6 @@
 $servidor = 'localhost';
 $usuario = 'root';
 $senha = '';
-$dbName = 'gospelChord';
+$dbName = 'gospelchord';
 
 $conn = mysqli_connect($servidor, $usuario, $senha, $dbName);
