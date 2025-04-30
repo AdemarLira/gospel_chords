@@ -42,6 +42,11 @@ $imagemPerfil = isset($_SESSION['imagemPerfil']) ? $_SESSION['imagemPerfil'] : '
           <i class="fa-solid fa-magnifying-glass fa-sm"></i>
         </button>
       </form>
+      <!-- <button type="button" class="btn btn-outline-secondary me-2" id="importar-musica">Enviar cifra</button> 
+        <div class="input-group mb-3">
+          <input type="file" class="form-control" id="inputGroupFile02">
+          <label class="input-group-text" for="inputGroupFile02">Upload</label>
+        </div> -->
 <!-- Itens à direita -->
       <ul class="navbar-nav align-items-center">
         <li class="nav-item">
