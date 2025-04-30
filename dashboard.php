@@ -11,57 +11,59 @@ $imagemPerfil = isset($_SESSION['imagemPerfil']) ? $_SESSION['imagemPerfil'] : '
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="./img/logo_amarela.png">
     <script src="https://kit.fontawesome.com/328073035f.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/dashboard2.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <title>Página inicial</title>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg custom-navbar" id="painel-navegacao">
-    <div class="container-fluid d-flex align-items-center justify-content-between">
-
-      <!-- Logo + Botão Tema -->
-      <div class="d-flex align-items-center">
+  <!-- HEADER -->
+<nav class="navbar navbar-expand-lg custom-navbar" id="painel-navegacao">
+  <div class="container-fluid">
+    <nav class="navbar transparent-navbar">
+      <div class="container">
         <a class="navbar-brand" href="index.html">
           <img src="img/logo_azul.png" id="logo-gospelChord" alt="logo" height="40">
         </a>
-        <div class="theme-switch-wrapper ms-3">
-          <label class="theme-switch" for="checkbox">
-            <input type="checkbox" id="checkbox" />
-            <div class="slider round"></div>
-          </label>
-        </div>
       </div>
-      <!-- Campo de Busca CENTRAL -->
-      <form class="d-flex mx-auto" role="search" style="max-width: 500px; width: 100%;">
+    </nav>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+<!-- TEMAS DARK LIGHT -->
+      <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+          <input type="checkbox" id="checkbox" />
+          <div class="slider round"></div>
+        </label>
+      </div>
+<!-- BUSCA musicas -->
+      <form class="d-flex me-auto" role="search">
         <input class="form-control me-2" type="search" placeholder="Pesquisar música" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">
           <i class="fa-solid fa-magnifying-glass fa-sm"></i>
         </button>
       </form>
-
-      <!-- Itens Direita -->
-      <ul class="navbar-nav flex-row align-items-center">
-        <li class="nav-item me-2">
+<!-- Itens à direita -->
+      <ul class="navbar-nav align-items-center">
+        <li class="nav-item">
           <button class="btn" id="header-botao-premium" onclick="verificarPlanos()">Premium <i class="bi bi-bookmark-star-fill"></i></button>
         </li>
         <li class="nav-item me-2">
           <a class="nav-link" href="listas.php" id="listas">Minhas listas</a>
         </li>
         <li class="nav-item dropdown" id="dropdown">
-          <a class="nav-link dropdown-toggle" id="dropdown1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="<?php echo $imagemPerfil; ?>" alt="Perfil" class="rounded-circle" style="width: 40px; height: 40px; object-fit: cover;">
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="meu_perfil.php">Meu perfil</a></li>
-            <li><a class="dropdown-item" href="assinaturas.php">Minhas assinaturas</a></li>
-            <li><a class="dropdown-item" href="#" id="pedir-cifra">Pedir cifra</a></li>
-            <br>
-            <li><a class="dropdown-item" href="index.html" id="sair">Sair</a></li>
-          </ul>
-        </li>
-      </ul>
-
+            <a class="nav-link dropdown-toggle" id="dropdown1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="<?php echo $imagemPerfil; ?>" alt="Perfil" class="rounded-circle" style="width: 40px; height: 40px; object-fit: cover;">
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="meu_perfil.php">Meu perfil</a></li>
+              <li><a class="dropdown-item" href="assinaturas.php">Minhas assinaturas</a></li>
+              <li><a class="dropdown-item" href="#" id="pedir-cifra">Pedir cifra</a></li>
+              <br>
+              <li><a class="dropdown-item" href="index.html" id="sair">Sair</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
 <!-- <div id="background">
