@@ -11,22 +11,22 @@ $imagemPerfil = isset($_SESSION['imagemPerfil']) ? $_SESSION['imagemPerfil'] : '
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="./img/logo_amarela.png">
     <script src="https://kit.fontawesome.com/328073035f.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/dashboard2.css">
+    <link rel="stylesheet" href="css/dashboard.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <title>Página inicial</title>
 </head>
 <body>
-  <!-- HEADER -->
-<nav class="navbar navbar-expand-lg custom-navbar" id="painel-navegacao">
-  <div class="container-fluid">
-    <nav class="navbar transparent-navbar">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <img src="img/logo_azul.png" id="logo-gospelChord" alt="logo" height="40">
-        </a>
-      </div>
-    </nav>
+<!-- HEADER -->
+  <nav class="navbar navbar-expand-lg custom-navbar" id="painel-navegacao">
+    <div class="container-fluid">
+      <nav class="navbar transparent-navbar">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <img src="img/logo_azul.png" id="logo-gospelChord" alt="logo" height="40">
+          </a>
+        </div>
+      </nav>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
 <!-- TEMAS DARK LIGHT -->
       <div class="theme-switch-wrapper">
@@ -36,7 +36,7 @@ $imagemPerfil = isset($_SESSION['imagemPerfil']) ? $_SESSION['imagemPerfil'] : '
         </label>
       </div>
 <!-- BUSCA musicas -->
-      <form class="d-flex me-auto" role="search">
+      <form class="d-flex me-auto" role="search" id="pesquisa-musica">
         <input class="form-control me-2" type="search" placeholder="Pesquisar música" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">
           <i class="fa-solid fa-magnifying-glass fa-sm"></i>
@@ -66,8 +66,6 @@ $imagemPerfil = isset($_SESSION['imagemPerfil']) ? $_SESSION['imagemPerfil'] : '
       </div>
     </div>
   </nav>
-  <div>
-</div>
 <!-- <div id="background">
   <video loop autoplay muted>
     <source src="mp4/violao.mp4" type="video/mp4">
