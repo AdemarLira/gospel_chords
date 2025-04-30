@@ -11,22 +11,22 @@ $imagemPerfil = isset($_SESSION['imagemPerfil']) ? $_SESSION['imagemPerfil'] : '
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="./img/logo_amarela.png">
     <script src="https://kit.fontawesome.com/328073035f.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/dashboard1.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <title>Página inicial</title>
 </head>
 <body>
-  <!-- HEADER -->
-<nav class="navbar navbar-expand-lg custom-navbar" id="painel-navegacao">
-  <div class="container-fluid">
-    <nav class="navbar transparent-navbar">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <img src="img/logo_azul.png" id="logo-gospelChord" alt="logo" height="40">
-        </a>
-      </div>
-    </nav>
+<!-- HEADER -->
+  <nav class="navbar navbar-expand-lg custom-navbar" id="painel-navegacao">
+    <div class="container-fluid">
+      <nav class="navbar transparent-navbar">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <img src="img/logo_azul.png" id="logo-gospelChord" alt="logo" height="40">
+          </a>
+        </div>
+      </nav>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
 <!-- TEMAS DARK LIGHT -->
       <div class="theme-switch-wrapper">
@@ -36,18 +36,23 @@ $imagemPerfil = isset($_SESSION['imagemPerfil']) ? $_SESSION['imagemPerfil'] : '
         </label>
       </div>
 <!-- BUSCA musicas -->
-      <form class="d-flex me-auto" role="search">
+      <form class="d-flex me-auto" role="search" id="pesquisa-musica">
         <input class="form-control me-2" type="search" placeholder="Pesquisar música" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">
           <i class="fa-solid fa-magnifying-glass fa-sm"></i>
         </button>
       </form>
+      <!-- <button type="button" class="btn btn-outline-secondary me-2" id="importar-musica">Enviar cifra</button> 
+        <div class="input-group mb-3">
+          <input type="file" class="form-control" id="inputGroupFile02">
+          <label class="input-group-text" for="inputGroupFile02">Upload</label>
+        </div> -->
 <!-- Itens à direita -->
       <ul class="navbar-nav align-items-center">
         <li class="nav-item">
           <button class="btn" id="header-botao-premium" onclick="verificarPlanos()">Premium <i class="bi bi-bookmark-star-fill"></i></button>
         </li>
-        <li class="nav-item me-2">
+        <li class="nav-item">
           <a class="nav-link" href="listas.php" id="listas">Minhas listas</a>
         </li>
         <li class="nav-item dropdown" id="dropdown">
@@ -57,7 +62,7 @@ $imagemPerfil = isset($_SESSION['imagemPerfil']) ? $_SESSION['imagemPerfil'] : '
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="meu_perfil.php">Meu perfil</a></li>
               <li><a class="dropdown-item" href="assinaturas.php">Minhas assinaturas</a></li>
-              <li><a class="dropdown-item" href="#" id="pedir-cifra">Pedir cifra</a></li>
+              <li><a class="dropdown-item" href="repertorio.php" id="pedir-cifra">Pedir cifra</a></li>
               <br>
               <li><a class="dropdown-item" href="index.html" id="sair">Sair</a></li>
             </ul>
