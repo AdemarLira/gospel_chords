@@ -23,7 +23,7 @@
           $caminhoCompleto = ""; // ou defina um valor padrão
       }
   
-      $sql = "INSERT INTO usuarios (nome, email, senha, celular, status, cidade, estado, tipo_cadastro, datahora_cadastro, foto) 
+      $sql = "INSERT INTO usuarios (nome, email, senha, celular, status, cidade, estado, tipo_cadastro, datahora_cadastro, img) 
               VALUES ('$nome', '$email', '$senhaCriptografada', '$celular', 'ativo', '$cidade', '$estado', 'free', now(), '$caminhoCompleto')";
   
       if (mysqli_query($conn, $sql)) {

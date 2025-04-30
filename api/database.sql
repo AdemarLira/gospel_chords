@@ -8,7 +8,8 @@ CREATE TABLE usuarios (
        cidade VARCHAR(255) NOT NULL,
        estado VARCHAR(255) NOT NULL,
        tipo_cadastro VARCHAR(255) NOT NULL,
-       datahora_cadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+       datahora_cadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+       img VARCHAR (255)
 );
 
 CREATE TABLE `gospelchord`.`musicas` (
@@ -17,4 +18,4 @@ CREATE TABLE `gospelchord`.`musicas` (
        `autor` VARCHAR(255) NOT NULL , 
        `versao` VARCHAR(255) NOT NULL ,
        `tipo` VARCHAR(255) NOT NULL , 
-       PRIMARY KEY (`id `)) ENGINE = InnoDB;
+       PRIMARY KEY (`id`)) ENGINE = InnoDB;
