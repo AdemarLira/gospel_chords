@@ -62,7 +62,7 @@ $imagemPerfil = isset($_SESSION['imagemPerfil']) ? $_SESSION['imagemPerfil'] : '
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="meu_perfil.php">Meu perfil</a></li>
               <li><a class="dropdown-item" href="assinaturas.php">Minhas assinaturas</a></li>
-              <li><a class="dropdown-item" href="#" id="pedir-cifra">Pedir cifra</a></li>
+              <li><a class="dropdown-item" href="repertorio.php" id="pedir-cifra">Pedir cifra</a></li>
               <br>
               <li><a class="dropdown-item" href="index.html" id="sair">Sair</a></li>
             </ul>
