@@ -1,6 +1,6 @@
 <?php
-include_once("api/conexao.php");
-session_start();
+  include_once("api/conexao.php");
+  session_start();
 $imagemPerfil = isset($_SESSION['imagemPerfil']) ? $_SESSION['imagemPerfil'] : 'uploads/logo2.png';
 ?>
 
@@ -160,9 +160,9 @@ $imagemPerfil = isset($_SESSION['imagemPerfil']) ? $_SESSION['imagemPerfil'] : '
     </div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/functions.js"></script>
-  <script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/functions.js"></script>
+<script>
     fetch('api/usuario.php')
       .then(response => response.json())
       .then(data => {
@@ -211,6 +211,6 @@ $imagemPerfil = isset($_SESSION['imagemPerfil']) ? $_SESSION['imagemPerfil'] : '
       mostrarPainel('assinaturas');
     });
   });
-  </script>
+</script>
 </body>
 </html>
