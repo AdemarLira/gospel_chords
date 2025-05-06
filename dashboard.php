@@ -1,7 +1,7 @@
 <?php
-include_once("api/conexao.php");
-session_start();
-$imagemPerfil = isset($_SESSION['imagemPerfil']) ? $_SESSION['imagemPerfil'] : 'uploads/images.jpg';
+  include_once("api/conexao.php");
+  session_start();
+$imagemPerfil = isset($_SESSION['imagemPerfil']) ? $_SESSION['imagemPerfil'] : 'uploads/logo2.png';
 ?>
 
 <!DOCTYPE html>
@@ -53,7 +53,7 @@ $imagemPerfil = isset($_SESSION['imagemPerfil']) ? $_SESSION['imagemPerfil'] : '
           <button class="btn" id="header-botao-premium" onclick="verificarPlanos()">Premium <i class="bi bi-bookmark-star-fill"></i></button>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="listas.php" id="listas">Minhas listas</a>
+          <a class="nav-link" href="#" id="btn-listas">Minhas listas</a>
         </li>
         <li class="nav-item dropdown" id="dropdown">
             <a class="nav-link dropdown-toggle" id="dropdown1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -61,7 +61,7 @@ $imagemPerfil = isset($_SESSION['imagemPerfil']) ? $_SESSION['imagemPerfil'] : '
             </a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="meu_perfil.php">Meu perfil</a></li>
-              <li><a class="dropdown-item" href="assinaturas.php">Minhas assinaturas</a></li>
+              <li><a class="dropdown-item" href="#" id="btn-assinaturas">Minhas assinaturas</a></li>
               
               <li><a class="dropdown-item" href="https://wa.me/83998603238" target="_blank" id="pedir-cifra">Pedir cifra</a></li>
               <br>
@@ -120,10 +120,49 @@ $imagemPerfil = isset($_SESSION['imagemPerfil']) ? $_SESSION['imagemPerfil'] : '
       </div>
     </div>
   </div>
-  <h1>TESTE</h1>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/functions.js"></script>
-  <script>
+
+  <!-- Conteúdo principal -->
+    <!-- ASSINATURAS -->
+    <div id="assinaturas" class="container mt-4" style="display: none;">
+     <h2 class="mb-4">Assinaturas</h2>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Free</h5>
+              <p class="card-text">Recursos disponíveis: </p>
+              <p class="card-text"><small class="text-muted">R$0,00</small></p>
+            </div>
+            <div class="card-footer d-flex justify-content-between"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LISTAS -->
+   <div id="listas-musicas" class="container mt-4" style="display: none;">
+    <h2 class="mb-4">Minhas listas</h2>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Nome da Lista</h5>
+              <p class="card-text">Autor: </p>
+              <p class="card-text"><small class="text-muted">Versão: Simplificada</small></p>
+            </div>
+            <div class="card-footer d-flex justify-content-between">
+              <a href="#" class="btn btn-sm btn-outline-primary">Ver Cifras</a>
+              <button class="btn btn-sm btn-outline-danger">Excluir</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/functions.js"></script>
+<script>
     fetch('api/usuario.php')
       .then(response => response.json())
       .then(data => {
@@ -146,6 +185,32 @@ $imagemPerfil = isset($_SESSION['imagemPerfil']) ? $_SESSION['imagemPerfil'] : '
         });
 
     body.classList.add('light-mode');})
-  </script>
+
+
+    // ALTERNACIA no conteudo do body
+    function mostrarPainel(id) {
+    const paineis = ['listas-musicas', 'assinaturas'];
+    paineis.forEach(painel => {
+      document.getElementById(painel).style.display = (painel === id) ? 'block' : 'none';
+    });
+  }
+
+  function fecharPainel(id) {
+    document.getElementById(id).style.display = 'none';
+  }
+
+  // Adiciona os listeners ao carregar o DOM
+  document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('btn-listas').addEventListener('click', (e) => {
+      e.preventDefault();
+      mostrarPainel('listas-musicas');
+    });
+
+    document.getElementById('btn-assinaturas').addEventListener('click', (e) => {
+      e.preventDefault();
+      mostrarPainel('assinaturas');
+    });
+  });
+</script>
 </body>
 </html>
