@@ -114,7 +114,7 @@ input:checked + .slider:before {
   color: black;
 }
 
-#header-botao-premium, #listas{
+#header-botao-premium, #btn-listas{
   margin-right: 20px;
 }
 
@@ -232,3 +232,13 @@ input:checked + .slider:before {
 .dropdown-item:active {
   background-color: rgba(231, 177, 29, 0.521) !important;
 }  
+
+.card {
+  border-radius: 15px;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(243, 239, 239, 0.548);
+}
