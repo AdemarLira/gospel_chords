@@ -27,9 +27,11 @@
               VALUES ('$nome', '$email', '$senhaCriptografada', '$celular', 'ativo', '$cidade', '$estado', 'free', now(), '$caminhoCompleto')";
   
       if (mysqli_query($conn, $sql)) {
-          echo "Usuário cadastrado com sucesso!";
-          // header("Location: ../index.html");
-          // exit;
+        echo "<script>
+                alert('Usuário cadastrado com sucesso!');
+                window.location.href = '../index.html';
+            </script>";
+          exit;
       } else {
           echo "Erro ao cadastrar: " . mysqli_error($conn);
       }
