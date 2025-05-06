@@ -29,7 +29,7 @@ body.dark-mode {
   backdrop-filter: blur(10px);              
   -webkit-backdrop-filter: blur(10px);       
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);      
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05); 
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);  
 }
 
 /* BOTAO TEMA escuro/claro */
@@ -108,6 +108,10 @@ input:checked + .slider:before {
   backdrop-filter: blur(10px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
   color: #fff;
+}
+
+#modal-upload {
+  color: black;
 }
 
 #header-botao-premium, #listas{

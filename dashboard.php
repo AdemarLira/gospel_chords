@@ -11,7 +11,7 @@ $imagemPerfil = isset($_SESSION['imagemPerfil']) ? $_SESSION['imagemPerfil'] : '
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="./img/logo_amarela.png">
     <script src="https://kit.fontawesome.com/328073035f.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/dashboard1.css">
+    <link rel="stylesheet" href="css/dashboard.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <title>Página inicial</title>
@@ -42,11 +42,11 @@ $imagemPerfil = isset($_SESSION['imagemPerfil']) ? $_SESSION['imagemPerfil'] : '
           <i class="fa-solid fa-magnifying-glass fa-sm"></i>
         </button>
       </form>
-      <!-- <button type="button" class="btn btn-outline-secondary me-2" id="importar-musica">Enviar cifra</button> 
-        <div class="input-group mb-3">
-          <input type="file" class="form-control" id="inputGroupFile02">
-          <label class="input-group-text" for="inputGroupFile02">Upload</label>
-        </div> -->
+      <div>
+        <button type="button" class="btn btn-outline-secondary me-2" data-bs-toggle="modal" data-bs-target="#modal-upload">
+            Enviar cifra
+        </button>
+      </div>
 <!-- Itens à direita -->
       <ul class="navbar-nav align-items-center">
         <li class="nav-item">
@@ -62,7 +62,8 @@ $imagemPerfil = isset($_SESSION['imagemPerfil']) ? $_SESSION['imagemPerfil'] : '
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="meu_perfil.php">Meu perfil</a></li>
               <li><a class="dropdown-item" href="assinaturas.php">Minhas assinaturas</a></li>
-              <li><a class="dropdown-item" href="repertorio.php" id="pedir-cifra">Pedir cifra</a></li>
+              
+              <li><a class="dropdown-item" href="https://wa.me/83998603238" target="_blank" id="pedir-cifra">Pedir cifra</a></li>
               <br>
               <li><a class="dropdown-item" href="index.html" id="sair">Sair</a></li>
             </ul>
@@ -71,11 +72,55 @@ $imagemPerfil = isset($_SESSION['imagemPerfil']) ? $_SESSION['imagemPerfil'] : '
       </div>
     </div>
   </nav>
-<!-- <div id="background">
-  <video loop autoplay muted>
-    <source src="mp4/violao.mp4" type="video/mp4">
-  </video>
-</div> -->
+  <!-- MODAL ENVIAR CIFRA -->
+  <div class="modal fade" id="modal-upload" tabindex="-1" aria-labelledby="uploadModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        
+        <div class="modal-header">
+          <h5 class="modal-title" id="uploadModalLabel">Enviar Cifra</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        
+        <div class="modal-body">
+          <div class="input-group input-group-sm mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Música</span>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+          </div>
+          <div class="input-group input-group-sm mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Autor</span>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+          </div>
+          <div class="input-group input-group-sm mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Versão</span>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
+            <label class="form-check-label" for="radioDefault1">
+              Simplificada
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault2" checked>
+            <label class="form-check-label" for="radioDefault2">
+              Padrão
+            </label>
+          </div>
+          <br>
+          <div class="input-group mb-3">
+            <input type="file" class="form-control" id="inputGroupFile02">
+            <label class="input-group-text" for="inputGroupFile02">Upload</label>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+          <button type="button" class="btn btn-primary">Enviar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h1>TESTE</h1>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/functions.js"></script>
   <script>
