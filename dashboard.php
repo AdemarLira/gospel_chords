@@ -1,7 +1,15 @@
 <?php
   include_once("api/conexao.php");
   session_start();
-$imagemPerfil = isset($_SESSION['imagemPerfil']) ? $_SESSION['imagemPerfil'] : 'uploads/logo2.png';
+  
+  if (!isset($_SESSION['usuario_id'])) {
+    header("Location: index.php?erro=naoautorizado");
+    exit();
+  }
+
+  $imagemPerfil = isset($_SESSION['img']) && !empty($_SESSION['img']) ? $_SESSION['img'] : 'uploads/images.jpg';
+
+  var_dump($_SESSION['img']);
 ?>
 
 <!DOCTYPE html>
@@ -11,10 +19,13 @@ $imagemPerfil = isset($_SESSION['imagemPerfil']) ? $_SESSION['imagemPerfil'] : '
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="./img/logo_amarela.png">
     <script src="https://kit.fontawesome.com/328073035f.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/dashboard1.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <title>Página inicial</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+  </style>
 </head>
 <body>
 <!-- HEADER -->
@@ -57,7 +68,7 @@ $imagemPerfil = isset($_SESSION['imagemPerfil']) ? $_SESSION['imagemPerfil'] : '
         </li>
         <li class="nav-item dropdown" id="dropdown">
             <a class="nav-link dropdown-toggle" id="dropdown1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <img src="<?php echo $imagemPerfil; ?>" alt="Perfil" class="rounded-circle" style="width: 40px; height: 40px; object-fit: cover;">
+             <img src="<?php echo htmlspecialchars($imagemPerfil); ?>" alt="Perfil" class="rounded-circle" style="width: 40px; height: 40px; object-fit: cover;">
             </a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="meu_perfil.php">Meu perfil</a></li>
@@ -141,7 +152,7 @@ $imagemPerfil = isset($_SESSION['imagemPerfil']) ? $_SESSION['imagemPerfil'] : '
 
     <!-- LISTAS -->
    <div id="listas-musicas" class="container mt-4" style="display: none;">
-    <h2 class="mb-4">Minhas listas</h2>
+    <h2 class="txt-body">Minhas listas</h2>
       <div class="row row-cols-1 row-cols-md-3 g-4">
         <div class="col">
           <div class="card h-100">
@@ -163,26 +174,19 @@ $imagemPerfil = isset($_SESSION['imagemPerfil']) ? $_SESSION['imagemPerfil'] : '
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="js/functions.js"></script>
 <script>
-    fetch('api/usuario.php')
-      .then(response => response.json())
-      .then(data => {
-        const imagem = data.imagem || 'uploads/images.jpg';
-        document.getElementById('imagem-perfil').src = imagem;
+    document.addEventListener('DOMContentLoaded', (event) => {
+      const checkbox = document.getElementById('checkbox');
+      const body = document.body;
+
+      checkbox.addEventListener('change', () => {
+          if (checkbox.checked){
+              body.classList.remove('light-mode');
+              body.classList.add('dark-mode');
+          } else{
+              body.classList.remove('dark-mode');
+              body.classList.add('light-mode');
+          }
       });
-
-      document.addEventListener('DOMContentLoaded', (event) => {
-        const checkbox = document.getElementById('checkbox');
-        const body = document.body;
-
-        checkbox.addEventListener('change', () => {
-            if (checkbox.checked){
-                body.classList.remove('light-mode');
-                body.classList.add('dark-mode');
-            } else{
-                body.classList.remove('dark-mode');
-                body.classList.add('light-mode');
-            }
-        });
 
     body.classList.add('light-mode');})
 
