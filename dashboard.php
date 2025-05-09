@@ -7,9 +7,12 @@
     exit();
   }
 
-  $imagemPerfil = isset($_SESSION['img']) && !empty($_SESSION['img']) ? $_SESSION['img'] : 'uploads/images.jpg';
+  $imagemPerfil = isset($_SESSION['img']) && !empty($_SESSION['img']) 
+    ? 'uploads/' . basename($_SESSION['img']) 
+    : 'uploads/images.jpg';
 
-  var_dump($_SESSION['img']);
+    
+  // var_dump($_SESSION['img']);
 ?>
 
 <!DOCTYPE html>
