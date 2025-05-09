@@ -12,7 +12,7 @@ CREATE TABLE usuarios (
        img VARCHAR (255)
 );
 
-CREATE TABLE `gospelchord`.`musicas` (
+CREATE TABLE `gospel_chords`.`musicas` (
        `id` INT NOT NULL AUTO_INCREMENT , 
        `nome_musica` VARCHAR(255) NOT NULL , 
        `autor` VARCHAR(255) NOT NULL , 
