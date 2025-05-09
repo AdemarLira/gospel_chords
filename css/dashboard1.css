@@ -3,6 +3,13 @@ body {
   transition: background-color 1.0s, color 0.5s;
 } 
 
+.txt-body{
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
 body.light-mode {
   background-color: rgb(155, 154, 154);
   color: black;
