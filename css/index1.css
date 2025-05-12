@@ -22,7 +22,6 @@ body{
     box-sizing: border-box;
   }
   
-  /* Ajusta layout para telas menores */
   @media (max-width: 768px) {
     .pagina {
       flex-direction: column;
@@ -30,6 +29,7 @@ body{
   
     .coluna-infos, .coluna-formulario {
       max-width: 100%;
+      
     }
   }
   

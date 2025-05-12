@@ -168,20 +168,35 @@ input:checked + .slider:before {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
-@media (max-width: 600px) {
-  .header-pesquisa1 {
-    flex-direction: column;
-    align-items: stretch;
+@media (max-width: 992px) {
+  #painel-navegacao .form-control {
+    font-size: 0.9rem;
   }
 
-  #js-header-pesquisa {
-    width: 100%;
-    max-width: 100%;
+  #painel-navegacao #pesquisa-musica {
+    width: 100% !important;
+    margin-top: 10px;
   }
 
-  .header-botao-pesquisa,
-  #header-botao-premium {
+  #header-botao-premium,
+  #btn-listas,
+  .theme-switch-wrapper,
+  #dropdown {
+    margin-top: 10px;
+  }
+
+  .navbar-nav {
+    flex-direction: grid;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .navbar-nav .nav-item {
     width: 100%;
+  }
+
+  .btn {
+    width: 50%;
   }
 }
 
@@ -243,9 +258,17 @@ input:checked + .slider:before {
 .card {
   border-radius: 15px;
   transition: transform 0.2s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 4px 20px rgba(243, 239, 239, 0.548);
 }
+.card-title {
+      font-size: clamp(1rem, 2.5vw, 1.5rem);
+    }
+
+    .card-text {
+      font-size: clamp(0.9rem, 2vw, 1.1rem);
+    }

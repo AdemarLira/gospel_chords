@@ -39,18 +39,22 @@
           <a class="navbar-brand" href="index.html">
             <img src="img/logo_azul.png" id="logo-gospelChord" alt="logo" height="40">
           </a>
-        </div>
+           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
       </nav>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
 <!-- TEMAS DARK LIGHT -->
-      <div class="theme-switch-wrapper">
+      <div class="theme-switch-wrapper me-3">
         <label class="theme-switch" for="checkbox">
           <input type="checkbox" id="checkbox" />
           <div class="slider round"></div>
         </label>
       </div>
 <!-- BUSCA musicas -->
-      <form class="d-flex me-auto" role="search" id="pesquisa-musica">
+      <form class="d-flex me-auto my-2" role="search" id="pesquisa-musica">
         <input class="form-control me-2" type="search" placeholder="Pesquisar música" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">
           <i class="fa-solid fa-magnifying-glass fa-sm"></i>
@@ -60,20 +64,21 @@
         <button type="button" class="btn btn-outline-secondary me-2" data-bs-toggle="modal" data-bs-target="#modal-upload">
             Enviar cifra
         </button>
+        <button class="btn" id="header-botao-premium" onclick="verificarPlanos()">
+          Premium 
+          <i class="bi bi-bookmark-star-fill"></i>
+        </button>
       </div>
 <!-- Itens à direita -->
       <ul class="navbar-nav align-items-center">
-        <li class="nav-item">
-          <button class="btn" id="header-botao-premium" onclick="verificarPlanos()">Premium <i class="bi bi-bookmark-star-fill"></i></button>
-        </li>
-        <li class="nav-item">
+        <li class="nav-item me-2">
           <a class="nav-link" href="#" id="btn-listas">Minhas listas</a>
         </li>
         <li class="nav-item dropdown" id="dropdown">
             <a class="nav-link dropdown-toggle" id="dropdown1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
              <img src="<?php echo htmlspecialchars($imagemPerfil); ?>" alt="Perfil" class="rounded-circle" style="width: 40px; height: 40px; object-fit: cover;">
             </a>
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu dropdown-menu-end">
               <li><a class="dropdown-item" href="meu_perfil.php">Meu perfil</a></li>
               <li><a class="dropdown-item" href="#" id="btn-assinaturas">Minhas assinaturas</a></li>
               
