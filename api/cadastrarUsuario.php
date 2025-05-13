@@ -12,7 +12,7 @@
       $senhaCriptografada = password_hash($senha, PASSWORD_DEFAULT);
   
       // Upload da imagem
-      $diretorio = "../uploads/";
+      $diretorio = "../assets/";
       $nomeArquivo = basename($_FILES["foto"]["name"]);
       $caminhoCompleto = $diretorio . $nomeArquivo;
   

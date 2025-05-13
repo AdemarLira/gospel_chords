@@ -2,14 +2,14 @@
   include_once("api/conexao.php");
   session_start();
   
-  if (!isset($_SESSION['usuario_id'])) {
-    header("Location: index.php?erro=naoautorizado");
-    exit();
-  }
+  // if (!isset($_SESSION['usuario_id'])) {
+  //   header("Location: index.php?erro=naoautorizado");
+  //   exit();
+  // }
 
   $imagemPerfil = isset($_SESSION['img']) && !empty($_SESSION['img']) 
-    ? 'uploads/' . basename($_SESSION['img']) 
-    : 'uploads/images.jpg';
+    ? 'assets/' . basename($_SESSION['img']) 
+    : 'assets/images.jpg';
 
     
   // var_dump($_SESSION['img']);
