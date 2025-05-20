@@ -104,15 +104,15 @@
         <div class="modal-body">
           <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing-sm">Música</span>
-            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+            <input type="text" class="form-control" id="nome_musica" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
           </div>
           <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing-sm">Autor</span>
-            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+            <input type="text" class="form-control" id="autor" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
           </div>
           <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing-sm">Versão</span>
-            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+            <input type="text" class="form-control" id="versao" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
           </div>
           <div class="form-check">
             <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
@@ -128,13 +128,13 @@
           </div>
           <br>
           <div class="input-group mb-3">
-            <input type="file" class="form-control" id="inputGroupFile02">
+            <input type="file" class="form-control" id="upload_cifra">
             <label class="input-group-text" for="inputGroupFile02">Upload</label>
           </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-          <button type="button" class="btn btn-primary">Enviar</button>
+          <button type="button" class="btn btn-primary" onclick="enviarCifra()">Enviar</button>
         </div>
       </div>
     </div>

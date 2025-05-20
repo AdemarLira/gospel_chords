@@ -30,3 +30,37 @@ function verificarPlanos() {
 function voltarIndex(){
   window.location.href = 'index.html';
 }
+
+function enviarCifra() {
+  const musica = document.getElementById('nome_musica').value;
+  const autor = document.getElementById('autor').value;
+  const versao = document.getElementById('versao').value;
+  const tipo = document.querySelector('input[name="radioDefault"]:checked').nextElementSibling.textContent.trim();
+  const arquivo = document.getElementById('upload_cifra').files[0];
+
+  if (!musica || !autor || !versao || !arquivo) {
+    alert("Preencha todos os campos e selecione um arquivo.");
+    return;
+  }
+
+  const formData = new FormData();
+    formData.append('musica', musica);
+    formData.append('autor', autor);
+    formData.append('versao', versao);
+    formData.append('tipo', tipo);
+    formData.append('arquivo', arquivo);
+
+  fetch('/api/envioCifra.php', {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => response.text())
+  .then(result => {
+    alert('Cifra enviada com sucesso!');
+    // Aqui você pode fechar o modal ou limpar o formulário, se desejar
+  })
+  .catch(error => {
+    console.error('Erro:', error);
+    alert('Erro ao enviar cifra.');
+  });
+}
